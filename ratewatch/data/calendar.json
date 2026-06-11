@@ -1,0 +1,23 @@
+{
+  "description": "Bundled US macro / econ-calendar dates (FOMC, CPI, NFP, GDP). Approximate public schedule; verify against official BLS / Federal Reserve / BEA releases.",
+  "events": [
+    {"date": "2026-06-17", "name": "FOMC Rate Decision", "category": "FOMC", "note": "Statement + SEP dot plot; press conference 14:30 ET."},
+    {"date": "2026-06-26", "name": "PCE Price Index (May)", "category": "PCE", "note": "Fed's preferred inflation gauge, 08:30 ET."},
+    {"date": "2026-07-02", "name": "Employment Situation (Jun, NFP)", "category": "NFP", "note": "Nonfarm payrolls + unemployment rate, 08:30 ET."},
+    {"date": "2026-07-14", "name": "CPI (Jun)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."},
+    {"date": "2026-07-29", "name": "FOMC Rate Decision", "category": "FOMC", "note": "Statement + press conference."},
+    {"date": "2026-07-30", "name": "GDP (Q2 advance)", "category": "GDP", "note": "BEA advance estimate, 08:30 ET."},
+    {"date": "2026-08-07", "name": "Employment Situation (Jul, NFP)", "category": "NFP", "note": "Nonfarm payrolls, 08:30 ET."},
+    {"date": "2026-08-12", "name": "CPI (Jul)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."},
+    {"date": "2026-09-04", "name": "Employment Situation (Aug, NFP)", "category": "NFP", "note": "Nonfarm payrolls, 08:30 ET."},
+    {"date": "2026-09-11", "name": "CPI (Aug)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."},
+    {"date": "2026-09-16", "name": "FOMC Rate Decision", "category": "FOMC", "note": "Statement + SEP dot plot; press conference."},
+    {"date": "2026-10-02", "name": "Employment Situation (Sep, NFP)", "category": "NFP", "note": "Nonfarm payrolls, 08:30 ET."},
+    {"date": "2026-10-13", "name": "CPI (Sep)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."},
+    {"date": "2026-10-28", "name": "FOMC Rate Decision", "category": "FOMC", "note": "Statement + press conference."},
+    {"date": "2026-11-06", "name": "Employment Situation (Oct, NFP)", "category": "NFP", "note": "Nonfarm payrolls, 08:30 ET."},
+    {"date": "2026-11-13", "name": "CPI (Oct)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."},
+    {"date": "2026-12-09", "name": "FOMC Rate Decision", "category": "FOMC", "note": "Statement + SEP dot plot; press conference."},
+    {"date": "2026-12-10", "name": "CPI (Nov)", "category": "CPI", "note": "Consumer Price Index, 08:30 ET."}
+  ]
+}

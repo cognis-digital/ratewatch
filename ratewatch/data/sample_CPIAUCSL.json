@@ -1,0 +1,17 @@
+{
+  "series_id": "CPIAUCSL",
+  "title": "Consumer Price Index for All Urban Consumers: All Items",
+  "units": "Index 1982-1984=100, Seasonally Adjusted",
+  "note": "Bundled offline sample. Set FRED_API_KEY for live data from https://fred.stlouisfed.org/series/CPIAUCSL",
+  "observations": [
+    {"date": "2025-09-01", "value": 323.05},
+    {"date": "2025-10-01", "value": 323.78},
+    {"date": "2025-11-01", "value": 324.41},
+    {"date": "2025-12-01", "value": 325.19},
+    {"date": "2026-01-01", "value": 326.02},
+    {"date": "2026-02-01", "value": 326.71},
+    {"date": "2026-03-01", "value": 327.44},
+    {"date": "2026-04-01", "value": 328.10},
+    {"date": "2026-05-01", "value": 328.85}
+  ]
+}

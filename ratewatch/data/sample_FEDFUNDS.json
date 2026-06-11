@@ -1,0 +1,17 @@
+{
+  "series_id": "FEDFUNDS",
+  "title": "Federal Funds Effective Rate",
+  "units": "Percent",
+  "note": "Bundled offline sample. Set FRED_API_KEY for live data from https://fred.stlouisfed.org/series/FEDFUNDS",
+  "observations": [
+    {"date": "2025-09-01", "value": 4.33},
+    {"date": "2025-10-01", "value": 4.33},
+    {"date": "2025-11-01", "value": 4.08},
+    {"date": "2025-12-01", "value": 4.08},
+    {"date": "2026-01-01", "value": 3.83},
+    {"date": "2026-02-01", "value": 3.83},
+    {"date": "2026-03-01", "value": 3.58},
+    {"date": "2026-04-01", "value": 3.58},
+    {"date": "2026-05-01", "value": 3.58}
+  ]
+}
