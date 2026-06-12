@@ -28,11 +28,30 @@ ratewatch yields --offline                  # Treasury par-yield curve (bundled 
 ratewatch yields                            # live Treasury curve (public, no key)
 ratewatch series FEDFUNDS --offline         # Fed funds effective rate
 ratewatch series CPIAUCSL                    # CPI (live if FRED_API_KEY set, else sample)
+ratewatch series DGS10 --offline            # 10-Year Treasury (preset)
 ratewatch calendar                          # upcoming FOMC / CPI / NFP dates
 ratewatch calendar --category FOMC --limit 3
 ratewatch yields --format json              # machine-readable
+ratewatch series DGS10 --format html --out dgs10.html   # styled HTML report
 ratewatch mcp                               # expose as an MCP server
 ```
+
+### Known FRED series presets
+
+These ids carry a friendly label and ship with bundled offline sample data
+(usable with `--offline` and no key):
+
+| Series id  | Label |
+|------------|-------|
+| `FEDFUNDS` | Federal Funds Effective Rate |
+| `CPIAUCSL` | Consumer Price Index (All Urban Consumers, All Items) |
+| `DGS2`     | 2-Year Treasury Constant Maturity Rate |
+| `DGS10`    | 10-Year Treasury Constant Maturity Rate |
+| `T10Y2Y`   | 10-Year minus 2-Year Treasury Spread |
+| `UNRATE`   | Unemployment Rate |
+| `PCEPILFE` | Core PCE Price Index (excl. food & energy) |
+
+Any other valid FRED series id also works (live with `FRED_API_KEY`).
 
 ### FRED API key (optional)
 
@@ -53,7 +72,7 @@ No key committed anywhere — it is read only from the environment. Without it, 
 | `series`   | FRED time series (e.g. `FEDFUNDS`, `CPIAUCSL`)      | free `FRED_API_KEY` (optional) |
 | `calendar` | Bundled FOMC / CPI / NFP / GDP / PCE dates (JSON)   | none |
 
-`--format table` (default) or `--format json`; `--out FILE` to write to disk; `--offline` to force bundled data.
+`--format table` (default), `--format json`, or `--format html`; `--out FILE` to write to disk; `--offline` to force bundled data.
 
 ## Offline demo
 
@@ -68,6 +87,7 @@ See [`demos/01-basic/SCENARIO.md`](demos/01-basic/SCENARIO.md).
 
 - **Table** (default) — human-readable terminal summary, including the 2s10s spread.
 - **JSON** — machine-readable for pipelines and agents.
+- **HTML** — a self-contained, styled report (inline CSS, no JS/network) for `yields`, `series`, and `calendar`; the latest observation is highlighted. Pair with `--out report.html`.
 
 ## Built on / data sources
 

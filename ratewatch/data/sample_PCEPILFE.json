@@ -1,0 +1,14 @@
+{
+  "series_id": "PCEPILFE",
+  "title": "Core PCE Price Index (excl. food & energy)",
+  "units": "Index 2017=100, Seasonally Adjusted",
+  "note": "Bundled offline sample. Set FRED_API_KEY for live data from https://fred.stlouisfed.org/series/PCEPILFE",
+  "observations": [
+    {"date": "2025-12-01", "value": 127.34},
+    {"date": "2026-01-01", "value": 127.61},
+    {"date": "2026-02-01", "value": 127.92},
+    {"date": "2026-03-01", "value": 128.20},
+    {"date": "2026-04-01", "value": 128.49},
+    {"date": "2026-05-01", "value": 128.77}
+  ]
+}

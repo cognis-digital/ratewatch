@@ -43,6 +43,23 @@ TREASURY_XML_URL = (
 )
 FRED_OBS_URL = "https://api.stlouisfed.org/fred/series/observations"
 
+# Friendly labels for commonly-watched FRED series. Used to provide a human
+# title (and offline degrade hints) when the live API metadata is unavailable.
+SERIES_PRESETS: Dict[str, str] = {
+    "FEDFUNDS": "Federal Funds Effective Rate",
+    "CPIAUCSL": "Consumer Price Index for All Urban Consumers: All Items",
+    "DGS2": "2-Year Treasury Constant Maturity Rate",
+    "DGS10": "10-Year Treasury Constant Maturity Rate",
+    "T10Y2Y": "10-Year minus 2-Year Treasury Spread",
+    "UNRATE": "Unemployment Rate",
+    "PCEPILFE": "Core PCE Price Index (excl. food & energy)",
+}
+
+
+def preset_label(series_id: str) -> str:
+    """Friendly label for a known FRED series id, or '' if unknown."""
+    return SERIES_PRESETS.get(series_id.upper(), "")
+
 # Treasury par-yield tenors, in canonical curve order.
 TREASURY_TENORS = (
     "1 Mo", "1.5 Month", "2 Mo", "3 Mo", "4 Mo", "6 Mo",
@@ -274,7 +291,7 @@ def load_sample_series(series_id: str) -> Series:
         observations=data.get("observations", []),
         source="fred-sample",
         units=data.get("units", ""),
-        title=data.get("title", ""),
+        title=data.get("title", "") or preset_label(series_id),
     )
 
 
@@ -300,7 +317,12 @@ def parse_fred_json(series_id: str, payload: Dict[str, Any]) -> Series:
         except (TypeError, ValueError):
             num = None
         obs.append({"date": o.get("date", ""), "value": num})
-    return Series(series_id=series_id.upper(), observations=obs, source="fred")
+    return Series(
+        series_id=series_id.upper(),
+        observations=obs,
+        source="fred",
+        title=preset_label(series_id),
+    )
 
 
 def fetch_series(series_id: str,

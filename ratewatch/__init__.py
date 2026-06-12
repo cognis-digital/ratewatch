@@ -16,6 +16,8 @@ from ratewatch.core import (
     bundled_series_ids,
     parse_treasury_xml,
     parse_fred_json,
+    SERIES_PRESETS,
+    preset_label,
 )
 
 __version__ = TOOL_VERSION
@@ -37,4 +39,6 @@ __all__ = [
     "bundled_series_ids",
     "parse_treasury_xml",
     "parse_fred_json",
+    "SERIES_PRESETS",
+    "preset_label",
 ]

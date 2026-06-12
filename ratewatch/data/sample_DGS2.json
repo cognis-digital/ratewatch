@@ -1,0 +1,14 @@
+{
+  "series_id": "DGS2",
+  "title": "2-Year Treasury Constant Maturity Rate",
+  "units": "Percent",
+  "note": "Bundled offline sample. Set FRED_API_KEY for live data from https://fred.stlouisfed.org/series/DGS2",
+  "observations": [
+    {"date": "2026-01-02", "value": 3.92},
+    {"date": "2026-02-02", "value": 3.85},
+    {"date": "2026-03-02", "value": 3.74},
+    {"date": "2026-04-01", "value": 3.66},
+    {"date": "2026-05-01", "value": 3.58},
+    {"date": "2026-06-01", "value": 3.51}
+  ]
+}
