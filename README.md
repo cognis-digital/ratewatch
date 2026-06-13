@@ -12,6 +12,16 @@
 
 `ratewatch` pulls **only public data** — the US Treasury Daily Par Yield Curve (public XML, no key) and the St. Louis Fed **FRED** time-series API (free key via the `FRED_API_KEY` environment variable, optional). With no key, or with `--offline`, it degrades gracefully to bundled sample data so it always produces output. Standard library only — no pip dependencies.
 
+<!-- cognis:domains:start -->
+## Domains
+
+**Primary domain:** Cyber & Security  ·  **JTF MERIDIAN division:** NULLBYTE · SPECTER
+
+**Topics:** `cognis` `security` `infosec` `cybersecurity` `blue-team` `cli`
+
+Part of the **Cognis Neural Suite** — 300+ source-available tools organized across 12 domains under the JTF MERIDIAN command structure. See the [suite on GitHub](https://github.com/cognis-digital) and [jtf-meridian](https://github.com/cognis-digital/jtf-meridian) for how the pieces fit together.
+<!-- cognis:domains:end -->
+
 ## Install
 
 ```bash
