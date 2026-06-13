@@ -13,6 +13,30 @@
 `ratewatch` pulls **only public data** — the US Treasury Daily Par Yield Curve (public XML, no key) and the St. Louis Fed **FRED** time-series API (free key via the `FRED_API_KEY` environment variable, optional). With no key, or with `--offline`, it degrades gracefully to bundled sample data so it always produces output. Standard library only — no pip dependencies.
 
 <!-- cognis:domains:start -->
+## Usage — step by step
+
+1. **Install** from source (Python 3.9+):
+   ```bash
+   pip install .
+   ```
+2. **Show** the US Treasury par-yield curve (live, or `--offline` for bundled data):
+   ```bash
+   ratewatch yields --format table
+   ```
+3. **Fetch** a FRED time series (e.g. Fed funds, CPI):
+   ```bash
+   ratewatch series FEDFUNDS --limit 24 --format json
+   ```
+4. **Check** upcoming FOMC / CPI / NFP dates from the bundled calendar:
+   ```bash
+   ratewatch calendar --format json
+   ```
+5. **Automate** — write a report file for a dashboard or CI artifact:
+   ```bash
+   ratewatch yields --format html --out yields.html
+   ```
+   Also: `ratewatch mcp` (run as an MCP stdio server).
+
 ## Domains
 
 **Primary domain:** Cyber & Security  ·  **JTF MERIDIAN division:** NULLBYTE · SPECTER
