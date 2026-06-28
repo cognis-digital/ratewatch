@@ -1,0 +1,3 @@
+$ ratewatch-emit --version
+
+ratewatch 0.1.0

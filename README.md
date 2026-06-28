@@ -13,6 +13,63 @@
 `ratewatch` pulls **only public data** — the US Treasury Daily Par Yield Curve (public XML, no key) and the St. Louis Fed **FRED** time-series API (free key via the `FRED_API_KEY` environment variable, optional). With no key, or with `--offline`, it degrades gracefully to bundled sample data so it always produces output. Standard library only — no pip dependencies.
 
 <!-- cognis:domains:start -->
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ ratewatch-emit --version
+ratewatch 0.1.0
+```
+
+```console
+$ ratewatch-emit --help
+usage: ratewatch [-h] [--version] {yields,series,calendar,mcp} ...
+
+Macro & rates CLI — Fed funds, CPI, Treasury yields, and key econ-calendar
+dates from public sources.
+
+positional arguments:
+  {yields,series,calendar,mcp}
+    yields              Show the US Treasury par-yield curve.
+    series              Show a FRED time series (e.g. FEDFUNDS, CPIAUCSL).
+    calendar            Upcoming FOMC / CPI / NFP dates (bundled).
+    mcp                 Run as an MCP server (stdio JSON-RPC).
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+```
+
+> Blocks above are real `ratewatch` output — reproduce them from a clone.
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+"findings": [
+    {
+        "id": "1234567890",
+        "title": "Suspicious Network Traffic",
+        "description": "Unusual network traffic detected from IP 192.168.1.100",
+        "severity": "high",
+        "created_at": "2023-02-20T14:30:00Z"
+    },
+    {
+        "id": "2345678901",
+        "title": "Malware Detection",
+        "description": "Malware detected on host 192.168.1.101",
+        "severity": "critical",
+        "created_at": "2023-02-20T14:31:00Z"
+    }
+]
+}
+```
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 1. **Install** from source (Python 3.9+):

@@ -1,0 +1,17 @@
+$ ratewatch-emit --help
+
+usage: ratewatch [-h] [--version] {yields,series,calendar,mcp} ...
+
+Macro & rates CLI — Fed funds, CPI, Treasury yields, and key econ-calendar
+dates from public sources.
+
+positional arguments:
+  {yields,series,calendar,mcp}
+    yields              Show the US Treasury par-yield curve.
+    series              Show a FRED time series (e.g. FEDFUNDS, CPIAUCSL).
+    calendar            Upcoming FOMC / CPI / NFP dates (bundled).
+    mcp                 Run as an MCP server (stdio JSON-RPC).
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
